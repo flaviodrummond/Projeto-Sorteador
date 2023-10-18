@@ -1,8 +1,10 @@
-const buttonClick = document.querySelector(".click")
+function buttonClick() {
 
-function buttonClick(){
+    const onNumber = Math.ceil (document.querySelector(".one-number").value)
+    const twoNumber = Math.floor (document.querySelector(".two-number").value)
 
-    const inputOneNumber = document.querySelector(".one-number").value
-    const inputTwoNumber = document.querySelector(".two-number").value
-    console.log(inputOneNumber, inputTwoNumber)
+    const result = Math.floor(Math.random() * (twoNumber - onNumber + 1) + onNumber)
+
+    alert(result)
+
 }
