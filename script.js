@@ -1,14 +1,16 @@
+
+const convertButton = document.querySelector('.convert-button')
+
 function buttonClick() {
 
-    const onNumber = Math.ceil (document.querySelector(".one-number").value)
-    const twoNumber = Math.floor (document.querySelector(".two-number").value)
+    const min = Math.round (document.querySelector('.min').value)
+    const max = Math.round (document.querySelector('.max').value)
 
-    if (onNumber >= twoNumber){
-        alert("O valor mínimo não pode ser MENOR que o valor máximo")
-    } else {
-        const result = Math.floor(Math.random() * (twoNumber - onNumber + 1) + onNumber)
+    const result = Math.round(Math.random() * (max - min + 1)) + min;
 
     alert(result)
-    }
- 
+
 }
+
+
+convertButton.addEventListener('click', buttonClick)
