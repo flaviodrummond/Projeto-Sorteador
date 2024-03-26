@@ -8,20 +8,21 @@
 
 body {
     background-color: #2e3339;
+}
+
+section {
     display: flex;
     align-items: center;
     /* Alinhou os itens ao centro */
     justify-content: center;
     flex-direction: column;
     /* Fez o alinhamento em colunas */
-    min-height: 100vh;
-    /* Usado para definir a altura mínima de um determinado elemento */
 }
 
 .top-img {
-    width: 40vw;
-    height: 40vh;
-    margin-top: 15px;
+    width: 20vw;
+    height: 30vh;
+    margin-top: 1.5rem;
 }
 
 h1 {
@@ -33,7 +34,7 @@ h1 {
 
 h2 {
     color: #FFF;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     margin-bottom: 20px;
@@ -41,20 +42,22 @@ h2 {
 
 h3 {
     color: #FFF;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    margin: 20px 0 30px 0;
+    margin: 20px 0 20px 0;
+    text-align: center;
 }
 
 h4,
 h5,
 a {
     color: #FFF;
-    font-size: 12px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
+    text-align: center;
 }
 
 input {
@@ -71,6 +74,11 @@ input {
     font-weight: 400;
     line-height: normal;
 }
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 
 label {
     color: #FFF;
@@ -98,6 +106,34 @@ button {
     font-weight: 400;
     cursor: pointer;
     margin-top: 52px;
+}
+
+.result h2 {
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.result-value {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 32px;
+    color: #FFFFFF;
+    background-color: #4aaa27;
+    text-align: center;
+    line-height: 60px;
+    display: none;
 }
 
 h6 {
@@ -131,7 +167,21 @@ button:active {
     margin-top: 5px;
 }
 
+footer {
+    background-color: #2e3339;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
 @media (max-width: 600px) {
+
+    .top-img {
+        width: 60vw;
+        height: 35vh;
+    }
 
     .input {
         display: flex;
@@ -151,6 +201,10 @@ button:active {
 
         h3 {
             text-align: center;
+        }
+
+        button {
+          width: 250px;  
         }
     }
 }
