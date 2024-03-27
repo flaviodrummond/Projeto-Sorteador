@@ -5,15 +5,17 @@ const resultValue = document.querySelector('.result-value')
 
 function buttonClick() {
 
-    const min = Math.round (document.querySelector('.min').value)
-    const max = Math.round (document.querySelector('.max').value)
+    const min = Math.ceil (document.querySelector('.min').value)
+    const max = Math.floor (document.querySelector('.max').value)
 
-    const result = Math.round(Math.random() * (max - min + 1)) + min;
+    const result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    if(min === max){
+    if(min < max){
         
     } else {
-        alert('Valor menor que o valor máximo')
+        
+        alert('Valor minimo tem que ser MENOR que o valor máximo')
+        resultValue.style.display = 'none'
     }
 
 
