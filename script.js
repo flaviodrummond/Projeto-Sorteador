@@ -10,17 +10,14 @@ function buttonClick() {
 
     const result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    if(min < max){
-        
-    } else {
-        
+    if(min >= max){
+
         alert('Valor minimo tem que ser MENOR que o valor máximo')
         resultValue.style.display = 'none'
-    }
 
+    } else {
 
-
-    const resultelement = document.createElement('div')
+        const resultelement = document.createElement('div')
 
     resultelement.classList.add('result-value')
     resultelement.innerHTML = result
@@ -37,6 +34,9 @@ function buttonClick() {
     } else {
         resultValue.style.display = 'block'
     }
+        
+    }
+    
 }
 
 
